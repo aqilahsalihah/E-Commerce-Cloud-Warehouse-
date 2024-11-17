@@ -1,0 +1,10 @@
+{
+    "snowflake": {
+        "user": "AqilahSalihah",
+        "password": "U21e78cdcfe",
+        "account": "dfupkhw-qk54952",
+        "warehouse": "COMPUTE_WH",
+        "database": "DMW",
+        "schema": "ECOMMERCE_TRANSFORMED"
+    }
+}

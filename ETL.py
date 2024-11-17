@@ -1,18 +1,26 @@
 import pandas as pd
+import json
 import featuretools as ft # type: ignore
 import snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
 
 # Snowflake Connection
 def get_snowflake_connection():
+    
+    #get config values from config.json
+    with open('config.json') as file:
+        config = json.load(file)
+        
+    snowflake_config = config["snowflake"]
+    
     conn = snowflake.connector.connect(
-        user='AqilahSalihah',
-        password='U21e78cdcfe',
-        account='dfupkhw-qk54952',
-        warehouse='COMPUTE_WH',
-        database='DMW',
-        schema='ECOMMERCE_TRANSFORMED'
-        )
+        user=snowflake_config["user"],
+        password=snowflake_config["password"],
+        account=snowflake_config["account"],
+        warehouse=snowflake_config["warehouse"],
+        database=snowflake_config["database"],
+        schema=snowflake_config["schema"]
+    )
     print("Connection Established")
     return conn
 
@@ -78,25 +86,34 @@ features, feature_defs = ft.dfs(entityset=es,
                                 agg_primitives=["sum", "mean", "mode",'count'])
 
 ## merge new features (orders)
-selected_features = ["WEEKDAY(OrderDate)", "YEAR(OrderDate)", "MONTH(OrderDate)", "WEEKDAY(ShipDate)", "MONTH(ShipDate)", "YEAR(ShipDate)"]
+selected_features = ["WEEKDAY(OrderDate)", "YEAR(OrderDate)", "MONTH(OrderDate)", 
+                     "WEEKDAY(ShipDate)", "MONTH(ShipDate)", "YEAR(ShipDate)"]
 merge_features = features[selected_features]
-merge_features.rename(columns={"WEEKDAY(OrderDate)":"OrderWeekday", "YEAR(OrderDate)":"OrderYear", "MONTH(OrderDate)":"OrderMonth", "WEEKDAY(ShipDate)":"ShipWeekday", "MONTH(ShipDate)":"ShipMonth", "YEAR(ShipDate)":"ShipYear"}, inplace=True)
+merge_features.rename(columns={"WEEKDAY(OrderDate)":"OrderWeekday", "YEAR(OrderDate)":"OrderYear", 
+                               "MONTH(OrderDate)":"OrderMonth", "WEEKDAY(ShipDate)":"ShipWeekday", 
+                               "MONTH(ShipDate)":"ShipMonth", "YEAR(ShipDate)":"ShipYear"}, inplace=True)
 orders = orders.merge(merge_features, left_on="OrderID", right_index=True)
 orders.sort_values("OrderDate", inplace=True)
 
 ## merge new features (customer)
-selected_features = ["CustomerID","customer.COUNT(orders)","customer.SUM(orders.OrderQuantity)", "customer.MEAN(orders.OrderTotal)"]
+selected_features = ["CustomerID","customer.COUNT(orders)","customer.SUM(orders.OrderQuantity)", 
+                     "customer.MEAN(orders.OrderTotal)"]
 merge_features = features[selected_features]
 merge_features = merge_features.groupby("CustomerID").mean()
-merge_features.rename(columns={"customer.COUNT(orders)":"CustomerOrderCount", "customer.SUM(orders.OrderQuantity)":"TotalItemsPurchased", "customer.MEAN(orders.OrderTotal)":"AverageSpent"}, inplace=True)
+merge_features.rename(columns={"customer.COUNT(orders)":"CustomerOrderCount", 
+                               "customer.SUM(orders.OrderQuantity)":"TotalItemsPurchased", 
+                               "customer.MEAN(orders.OrderTotal)":"AverageSpent"}, inplace=True)
 customers = customers.merge(merge_features, left_on="CustomerID", right_index=True)
 customers.sort_values("CustomerID", inplace=True)
 
 ## merge new features (seller)
-selected_features = ["SellerID", "sellers.COUNT(orders)", "sellers.SUM(orders.OrderQuantity)", "sellers.SUM(orders.OrderTotal)"]
+selected_features = ["SellerID", "sellers.COUNT(orders)", "sellers.SUM(orders.OrderQuantity)", 
+                     "sellers.SUM(orders.OrderTotal)"]
 merge_features = features[selected_features]
 merge_features = merge_features.groupby("SellerID").mean()
-merge_features.rename(columns={"sellers.COUNT(orders)":"SellerOrderCount", "sellers.SUM(orders.OrderQuantity)":"TotalItemsSold", "sellers.SUM(orders.OrderTotal)":"TotalRevenue"}, inplace=True)
+merge_features.rename(columns={"sellers.COUNT(orders)":"SellerOrderCount", 
+                               "sellers.SUM(orders.OrderQuantity)":"TotalItemsSold", 
+                               "sellers.SUM(orders.OrderTotal)":"TotalRevenue"}, inplace=True)
 sellers = sellers.merge(merge_features, left_on="SellerID", right_index=True)
 sellers.sort_values("SellerID", inplace=True)
 
@@ -104,7 +121,8 @@ sellers.sort_values("SellerID", inplace=True)
 selected_features = ["ProductID","products.SUM(orders.OrderQuantity)","products.SUM(orders.OrderTotal)"]
 merge_features = features[selected_features]
 merge_features = merge_features.groupby("ProductID").mean()
-merge_features.rename(columns={"products.SUM(orders.OrderQuantity)":"QuantitySold", "products.SUM(orders.OrderTotal)":"TotalRevenue"}, inplace=True)
+merge_features.rename(columns={"products.SUM(orders.OrderQuantity)":"QuantitySold", 
+                               "products.SUM(orders.OrderTotal)":"TotalRevenue"}, inplace=True)
 products = products.merge(merge_features, left_on="ProductID", right_index=True)
 products.sort_values("ProductID", inplace=True)
 
@@ -114,20 +132,22 @@ customers.columns = customers.columns.str.upper()
 sellers.columns = sellers.columns.str.upper()
 products.columns = products.columns.str.upper()
 
+
+
+#Load Upload DataFrames to Snowflake
 print(orders.info())
 print(customers.info())
 print(sellers.info())
 print(products.info())
+
+
+conn = get_snowflake_connection()
 
 orders.to_csv('Data/orders_transformed.csv', index=False)
 customers.to_csv('Data/customers_transformed.csv', index=False)
 sellers.to_csv('Data/sellers_transformed.csv', index=False)
 products.to_csv('Data/products_transformed.csv', index=False)
 
-conn = get_snowflake_connection()
-
-
-#Load Upload DataFrames to Snowflake
 upload_to_snowflake(conn, orders, "ORDERS")
 upload_to_snowflake(conn, customers, "CUSTOMERS")
 upload_to_snowflake(conn, sellers, "SELLERS")
