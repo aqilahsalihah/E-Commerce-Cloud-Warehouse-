@@ -1,0 +1,101 @@
+ProductID,ProductName,ProductCategory,ProductPrice,SellerID
+1,Wireless Mouse,Electronics,25.99,2000
+2,Bluetooth Headphones,Audio,79.99,2004
+3,Smartphone Stand,Accessories,15.49,2003
+4,Fitness Tracker,Fitness,49.99,2009
+5,LED Desk Lamp,Home,35.00,2009
+6,Mechanical Keyboard,Computers,99.99,2005
+7,Portable SSD,Storage,129.99,2000
+8,Smartwatch,Wearable Tech,199.99,2004
+9,Coffee Maker,Kitchen,89.99,2004
+10,Yoga Mat,Fitness,25.00,2008
+11,Electric Kettle,Kitchen,39.99,2006
+12,Gaming Mousepad,Gaming,19.99,2005
+13,Laptop Stand,Accessories,29.99,2005
+14,Air Fryer,Kitchen,79.99,2007
+15,Wireless Charger,Accessories,24.99,2009
+16,Multi-Tool,Outdoor,39.99,2003
+17,Backpack,Accessories,49.99,2004
+18,Scented Candles,Home,19.99,2006
+19,Pressure Cooker,Kitchen,89.00,2006
+20,Skincare Set,Beauty,54.99,2004
+21,Electric Toothbrush,Health,49.95,2002
+22,Portable Blender,Kitchen,30.00,2008
+23,Travel Pillow,Travel,22.99,2004
+24,Wall Art,Home,45.00,2008
+25,Cat Tree,Pets,99.99,2001
+26,Dog Collar,Pets,15.99,2006
+27,Electric Screwdriver,Tools,59.99,2009
+28,Video Camera,Electronics,199.00,2007
+29,Air Purifier,Home,129.99,2008
+30,Picnic Blanket,Outdoor,29.99,2008
+31,Wireless Printer,Office,99.99,2007
+32,Pasta Maker,Kitchen,39.00,2005
+33,Car Vacuum,Automotive,49.99,2005
+34,Board Game,Toys,34.99,2007
+35,Gardening Tools Set,Garden,45.00,2008
+36,Camping Tent,Outdoor,79.99,2005
+37,Bamboo Cutting Board,Kitchen,22.00,2005
+38,Sunglasses,Accessories,29.99,2007
+39,Wireless Earbuds,Audio,69.99,2003
+40,Cookbook,Books,27.99,2006
+41,Water Bottle,Fitness,18.99,2001
+42,Smart Home Hub,Smart Home,99.99,2005
+43,Nail Polish Set,Beauty,25.00,2003
+44,Drone,Electronics,249.99,2006
+45,Stainless Steel Water Bottle,Fitness,25.99,2007
+46,Phone Case,Accessories,14.99,2005
+47,Electric Skillet,Kitchen,49.99,2009
+48,Digital Camera,Electronics,299.99,2009
+49,Guitar Tuner,Music,19.99,2007
+50,Yoga Blocks,Fitness,29.99,2007
+51,Laptop Backpack,Accessories,69.99,2004
+52,Pet Grooming Kit,Pets,39.99,2008
+53,Wireless Security Camera,Home,109.99,2008
+54,Hiking Boots,Footwear,79.99,2002
+55,Electric Razor,Health,59.99,2003
+56,Puzzle,Toys,27.99,2003
+57,USB Flash Drive,Storage,9.99,2005
+58,Sketchbook,Art Supplies,14.99,2002
+59,Infrared Thermometer,Health,39.99,2001
+60,Camping Chair,Outdoor,29.99,2003
+61,Graphic Tee,Clothing,19.99,2003
+62,Oven Mitts,Kitchen,15.99,2009
+63,Smart Thermostat,Smart Home,149.99,2004
+64,Portable Phone Charger,Accessories,29.99,2004
+65,Face Mask Set,Health,19.99,2002
+66,Dish Rack,Kitchen,24.99,2001
+67,Protein Powder,Fitness,44.99,2006
+68,Bicycle Lock,Bicycles,29.99,2003
+69,Spice Rack,Kitchen,39.99,2004
+70,Electric Blanket,Home,59.99,2005
+71,Cushion Covers,Home,35.00,2007
+72,Gaming Headset,Gaming,69.99,2007
+73,Wooden Blocks,Toys,24.99,2009
+74,Tennis Racket,Fitness,89.99,2003
+75,Scent Diffuser,Home,34.99,2002
+76,Smart WiFi Plug,Smart Home,19.99,2007
+77,Crafting Kit,Art Supplies,29.99,2006
+78,Rain Jacket,Clothing,64.99,2009
+79,Over-Ear Headphones,Audio,59.99,2009
+80,First Aid Kit,Health,29.99,2008
+81,Weighted Blanket,Health,79.99,2008
+82,Window Blinds,Home,59.99,2009
+83,Kids Tablet,Electronics,129.99,2009
+84,USB-C Hub,Computers,39.99,2006
+85,Air Mattress,Outdoor,49.99,2009
+86,Hand Mixer,Kitchen,29.99,2003
+87,Phone Screen Protector,Accessories,12.99,2001
+88,Electric Bike,Bicycles,899.99,2003
+89,Cooking Utensil Set,Kitchen,24.99,2005
+90,Indoor Plants,Garden,19.99,2004
+91,Digital Food Scale,Kitchen,22.99,2002
+92,Pet Bed,Pets,39.99,2002
+93,Electric Wine Opener,Kitchen,29.99,2000
+94,Folding Table,Outdoor,59.99,2001
+95,Streaming Device,Electronics,49.99,2009
+96,Bike Helmet,Bicycles,34.99,2002
+97,Insulated Cooler,Outdoor,39.99,2004
+98,Hair Dryer,Beauty,39.99,2000
+99,Digital Alarm Clock,Home,19.99,2004
+100,Smart Light Bulbs,Smart Home,34.99,2001

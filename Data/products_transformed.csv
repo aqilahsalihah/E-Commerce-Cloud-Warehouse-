@@ -1,0 +1,68 @@
+PRODUCTID,PRODUCTNAME,PRODUCTCATEGORY,PRODUCTPRICE,SELLERID,QUANTITYSOLD,TOTALREVENUE
+1,Wireless Mouse,Electronics,25.99,2000,6.0,155.94
+2,Bluetooth Headphones,Audio,79.99,2004,12.0,959.8799999999998
+5,LED Desk Lamp,Home,35.0,2009,2.0,70.0
+6,Mechanical Keyboard,Computers,99.99,2005,3.0,299.96999999999997
+7,Portable SSD,Storage,129.99,2000,7.0,909.9300000000001
+8,Smartwatch,Wearable Tech,199.99,2004,5.0,999.95
+9,Coffee Maker,Kitchen,89.99,2004,4.0,359.96
+11,Electric Kettle,Kitchen,39.99,2006,13.0,519.87
+13,Laptop Stand,Accessories,29.99,2005,5.0,149.95
+14,Air Fryer,Kitchen,79.99,2007,6.0,479.93999999999994
+16,Multi-Tool,Outdoor,39.99,2003,14.0,559.86
+17,Backpack,Accessories,49.99,2004,2.0,99.98
+20,Skincare Set,Beauty,54.99,2004,14.0,769.8600000000001
+21,Electric Toothbrush,Health,49.95,2002,3.0,149.85000000000002
+24,Wall Art,Home,45.0,2008,3.0,135.0
+25,Cat Tree,Pets,99.99,2001,13.0,1299.87
+27,Electric Screwdriver,Tools,59.99,2009,3.0,179.97
+28,Video Camera,Electronics,199.0,2007,9.0,1791.0
+29,Air Purifier,Home,129.99,2008,9.0,1169.91
+30,Picnic Blanket,Outdoor,29.99,2008,7.0,209.93
+34,Board Game,Toys,34.99,2007,3.0,104.97
+37,Bamboo Cutting Board,Kitchen,22.0,2005,15.0,330.0
+38,Sunglasses,Accessories,29.99,2007,15.0,449.84999999999997
+39,Wireless Earbuds,Audio,69.99,2003,6.0,419.93999999999994
+40,Cookbook,Books,27.99,2006,7.0,195.93
+42,Smart Home Hub,Smart Home,99.99,2005,17.0,1699.83
+44,Drone,Electronics,249.99,2006,6.0,1499.94
+46,Phone Case,Accessories,14.99,2005,8.0,119.92
+47,Electric Skillet,Kitchen,49.99,2009,2.0,99.98
+48,Digital Camera,Electronics,299.99,2009,4.0,1199.96
+49,Guitar Tuner,Music,19.99,2007,9.0,179.91
+50,Yoga Blocks,Fitness,29.99,2007,8.0,239.92
+51,Laptop Backpack,Accessories,69.99,2004,2.0,139.98
+52,Pet Grooming Kit,Pets,39.99,2008,12.0,479.88
+55,Electric Razor,Health,59.99,2003,6.0,359.94
+56,Puzzle,Toys,27.99,2003,8.0,223.92
+58,Sketchbook,Art Supplies,14.99,2002,7.0,104.93
+59,Infrared Thermometer,Health,39.99,2001,7.0,279.93
+62,Oven Mitts,Kitchen,15.99,2009,14.0,223.86
+63,Smart Thermostat,Smart Home,149.99,2004,8.0,1199.92
+65,Face Mask Set,Health,19.99,2002,17.0,339.83
+68,Bicycle Lock,Bicycles,29.99,2003,14.0,419.86
+69,Spice Rack,Kitchen,39.99,2004,27.0,1079.73
+70,Electric Blanket,Home,59.99,2005,3.0,179.97
+71,Cushion Covers,Home,35.0,2007,9.0,315.0
+73,Wooden Blocks,Toys,24.99,2009,7.0,174.92999999999998
+74,Tennis Racket,Fitness,89.99,2003,6.0,539.9399999999999
+75,Scent Diffuser,Home,34.99,2002,8.0,279.92
+76,Smart WiFi Plug,Smart Home,19.99,2007,8.0,159.92
+77,Crafting Kit,Art Supplies,29.99,2006,4.0,119.96
+78,Rain Jacket,Clothing,64.99,2009,7.0,454.92999999999995
+79,Over-Ear Headphones,Audio,59.99,2009,1.0,59.99
+80,First Aid Kit,Health,29.99,2008,10.0,299.9
+82,Window Blinds,Home,59.99,2009,18.0,1079.82
+85,Air Mattress,Outdoor,49.99,2009,2.0,99.98
+87,Phone Screen Protector,Accessories,12.99,2001,1.0,12.99
+88,Electric Bike,Bicycles,899.99,2003,4.0,3599.96
+89,Cooking Utensil Set,Kitchen,24.99,2005,1.0,24.99
+90,Indoor Plants,Garden,19.99,2004,15.0,299.84999999999997
+91,Digital Food Scale,Kitchen,22.99,2002,5.0,114.94999999999999
+92,Pet Bed,Pets,39.99,2002,2.0,79.98
+94,Folding Table,Outdoor,59.99,2001,1.0,59.99
+96,Bike Helmet,Bicycles,34.99,2002,11.0,384.89
+97,Insulated Cooler,Outdoor,39.99,2004,9.0,359.91
+98,Hair Dryer,Beauty,39.99,2000,2.0,79.98
+99,Digital Alarm Clock,Home,19.99,2004,3.0,59.97
+100,Smart Light Bulbs,Smart Home,34.99,2001,7.0,244.93
