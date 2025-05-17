@@ -1,3 +1,4 @@
 # Ignore the config.json file containing sensitive data
 
 config.json
+Data/features.csv
